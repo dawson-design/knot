@@ -1,0 +1,3 @@
+# ruff.toml: lint and format settings for scripts/ and tests/.
+# knot.py needs Python 3.11 for tomllib, so ruff targets that.
+target-version = "py311"

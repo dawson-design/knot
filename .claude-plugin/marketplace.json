@@ -1,0 +1,24 @@
+{
+  "name": "knot",
+  "owner": {
+    "name": "Alastair Dawson",
+    "url": "https://github.com/kreek"
+  },
+  "metadata": {
+    "description": "knot: skills for writing branching narrative games.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "knot",
+      "description": "Canon, story outlines, beat sheets, scene prose, Ink, and review for branching narrative games, configured per project by knot.toml.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Alastair Dawson"
+      },
+      "source": "./",
+      "homepage": "https://github.com/kreek/knot",
+      "license": "MIT"
+    }
+  ]
+}

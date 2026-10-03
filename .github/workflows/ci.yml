@@ -1,0 +1,40 @@
+# CI for knot: unit tests (including a real inklecate compile), lint, and format.
+# scripts/knot.py is standard library only; uv provides Python from .python-version.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  # inklecate's Linux release asset, from https://github.com/inkle/ink/releases
+  INKLECATE_URL: https://github.com/inkle/ink/releases/download/v1.2.1/inklecate_linux.zip
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v10.2.0
+
+      - name: Install inklecate
+        run: |
+          curl --fail --silent --show-error --location --output "$RUNNER_TEMP/inklecate.zip" "$INKLECATE_URL"
+          mkdir -p "$RUNNER_TEMP/inklecate"
+          unzip -q "$RUNNER_TEMP/inklecate.zip" -d "$RUNNER_TEMP/inklecate"
+          chmod +x "$RUNNER_TEMP/inklecate/inklecate"
+          echo "$RUNNER_TEMP/inklecate" >> "$GITHUB_PATH"
+
+      - name: Unit tests
+        run: uv run python -m unittest discover tests
+
+      - name: Lint
+        run: uvx ruff check scripts tests
+
+      - name: Format
+        run: uvx ruff format --check scripts tests
