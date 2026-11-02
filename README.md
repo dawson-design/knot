@@ -24,7 +24,7 @@ Facts live in the project's files, not in the skills. When the story changes, yo
 In Claude Code, add this repo as a plugin marketplace, then install knot. Choose project scope, so knot loads only in your game's repo:
 
 ```
-/plugin marketplace add kreek/knot
+/plugin marketplace add dawson-design/knot
 /plugin install knot@knot
 ```
 

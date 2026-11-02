@@ -1,8 +1,8 @@
 {
   "name": "knot",
   "owner": {
-    "name": "Alastair Dawson",
-    "url": "https://github.com/kreek"
+    "name": "Dawson Design Ltd.",
+    "url": "https://github.com/dawson-design"
   },
   "metadata": {
     "description": "knot: skills for writing branching narrative games.",
@@ -17,7 +17,7 @@
         "name": "Alastair Dawson"
       },
       "source": "./",
-      "homepage": "https://github.com/kreek/knot",
+      "homepage": "https://github.com/dawson-design/knot",
       "license": "MIT"
     }
   ]

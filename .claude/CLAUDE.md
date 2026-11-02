@@ -34,4 +34,4 @@ claude plugin validate . --strict
 
 ## Git
 
-Work on a `feature/`, `fix/`, or `refactor/` branch off `main`, and merge it when the user approves. Commits are one logical change each, with no attribution trailers. The repo is public at github.com/kreek/knot, so nothing from a private game goes in.
+Work on a `feature/`, `fix/`, or `refactor/` branch off `main`, and merge it when the user approves. Commits are one logical change each, with no attribution trailers. The repo is public at github.com/dawson-design/knot, so nothing from a private game goes in.
